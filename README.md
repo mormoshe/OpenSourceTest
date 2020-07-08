@@ -1,2 +1,2 @@
 # OpenSourceTest
-![](test_gif.gif2)
+![](test_gif2.gif)
