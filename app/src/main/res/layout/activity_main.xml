@@ -12,16 +12,25 @@
         android:layout_height="match_parent"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="100dp"
-        app:photo_src="@drawable/mor" >
+        app:photo_src="@drawable/mor2" >
 
     </ja.burhanrashid52.photoeditor.PhotoEditorView>
 
     <Button
-        android:id="@+id/drawButton"
+        android:id="@+id/colorPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Draw"
+        app:layout_constraintEnd_toStartOf="@id/drawButton"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoEditorView"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/drawButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="Draw"
+        app:layout_constraintStart_toEndOf="@id/colorPicker"
         app:layout_constraintTop_toBottomOf="@id/photoEditorView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/eraseButton"
@@ -29,33 +38,16 @@
 
     <Button
         android:id="@+id/eraseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:text="Erase"
         app:layout_constraintStart_toEndOf="@id/drawButton"
         app:layout_constraintTop_toBottomOf="@id/photoEditorView"
-        app:layout_constraintEnd_toStartOf="@id/blackButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="663dp" />
-    <Button
-        android:id="@+id/blackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Black"
-        app:layout_constraintStart_toEndOf="@id/eraseButton"
-        app:layout_constraintTop_toBottomOf="@id/photoEditorView"
-        app:layout_constraintEnd_toStartOf="@id/redButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteY="663dp" />
 
-    <Button
-        android:id="@+id/redButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/blackButton"
-        app:layout_constraintTop_toBottomOf="@id/photoEditorView"
-        app:layout_constraintBottom_toBottomOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
